@@ -1,5 +1,21 @@
 /* +++++++++++++++++++++++++Global++++++++++++++++++++++++++++++++++++ */
 
+/* Define variables at the root */
+
+:root {
+  --color-bg: #d5e1ef;
+  --color-card: #ffffff;
+  --color-text: #7b879d;
+
+  /* recall 1rem = 16px (by default) */
+  --radius-large: 1.25rem; /* 20px */
+  --radius-medium: 0.9375rem; /* 15px */
+
+  --spacing-small: 1.25rem; /* 20px */
+  --spacing-medium: 1.5rem; /* 24px */
+  --spacing-large: 3rem; /* 48px */
+}
+
 /* Reset every default margins on the paghe to zero*/
 * {
   margin: 0;
@@ -11,7 +27,7 @@ body {
   /* Our HTML (head section) contains a code that auto determines the right size of the page based on the user's device. */
 
   /* colour */
-  background-color: #d5e1ef;
+  background-color: var(--color-bg);
 
   /* Topography */
   font-family: "Outfit", sans-serif;
@@ -35,16 +51,29 @@ main {
   align-items: center;
 
   /* colour */
-  background-color: #ffffff;
+  background-color: var(--color-card);
 
   /* Design */
-  border-radius: 20px;
-  padding: 25px 25px 50px 25px; /* top right bottom left */
-  gap: 20px /* gap between child elements */;
+  border-radius: var(--radius-large);
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-large)
+    var(--spacing-medium); /* (assuming your root font-size is 16px, 1.5rem ≈ 24px and 3rem ≈ 48px). This way, if someone increases browser font size for accessibility, your spacing adapts too. Below is a sample of setting properties in line with root html thereby making things flexible*/
+  /* html {
+  font-size: 16px; root font-size */
+
+  /* p {
+    font-size: 1rem;  16px */
+
+  /* h1 {
+    font-size: 2rem; 32px */
+
+  /* .container {
+    padding: 1.5rem;24px */
+
+  gap: var(--spacing-small); /* gap between child elements */
 }
 
 img {
-  border-radius: 15px;
+  border-radius: var(--radius-medium);
   align-items: center;
 }
 
@@ -55,7 +84,7 @@ img {
   /* Display */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--spacing-small);
 
   /* Align */
   text-align: center;
@@ -73,5 +102,5 @@ p {
   align-self: center;
 
   /* Color */
-  color: #7b879d;
+  color: var(--color-text);
 }
