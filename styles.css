@@ -1,0 +1,77 @@
+/* +++++++++++++++++++++++++Global++++++++++++++++++++++++++++++++++++ */
+
+/* Reset every default margins on the paghe to zero*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Size */
+  /* Our HTML (head section) contains a code that auto determines the right size of the page based on the user's device. */
+
+  /* colour */
+  background-color: #d5e1ef;
+
+  /* Topography */
+  font-family: "Outfit", sans-serif;
+}
+
+/* +++++++++++++++++++++++++ Body ++++++++++++++++++++++++++++++++++++ */
+
+main {
+  /* align this container only centrally */
+  position: absolute; /* Positioned absolute to the place you want it to stay i.e., 50% margin from top and 50% from left then transform to properly centralise. It is positioned absolute to the nearest container in this case body */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Size of container */
+  width: fit-content; /* Not needed but kept just in case */
+
+  /* Design container -  split image and text container*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* colour */
+  background-color: #ffffff;
+
+  /* Design */
+  border-radius: 20px;
+  padding: 25px 25px 50px 25px; /* top right bottom left */
+  gap: 20px /* gap between child elements */;
+}
+
+img {
+  border-radius: 15px;
+  align-items: center;
+}
+
+.text-container {
+  /* Size */
+  width: 90%; /* Make the width of the text container lower than that of the image */
+
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* Align */
+  text-align: center;
+}
+
+span {
+  display: block; /* make texts start froma new line */
+}
+
+p {
+  /* Size */
+  width: 80%;
+
+  /* Align */
+  align-self: center;
+
+  /* Color */
+  color: #7b879d;
+}
